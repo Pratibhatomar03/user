@@ -1,7 +1,24 @@
-<button>Register</button>
+<div class="container">
+  <form [formGroup]="registrationForm" (ngSubmit)="captureForm()">
+    <input formControlName="firstName" type="text" placeholder="First Name" />
+    <input formControlName="lastName" type="text" placeholder="Last Name" />
+    <input formControlName="number" type="text" placeholder="Phone Number" />
 
-<form action="" class="form">
-  <input type="text" placeholder="First Name" />
-  <input type="text" placeholder="Last Name" />
-  <input type="number" placeholder="Phone Number" />
-</form>
+    <input formControlName="street" type="text" placeholder="Street" />
+    <input
+      formControlName="houseNumber"
+      type="text"
+      placeholder="House Number"
+    />
+    <input formControlName="zipCode" type="text" placeholder="Zip Code" />
+    <input formControlName="city" type="text" placeholder="City" />
+
+    <input
+      formControlName="accountHolder"
+      type="text"
+      placeholder="Account Owner"
+    />
+    <input formControlName="iban" type="text" placeholder="IBAN" />
+    <button type="submit">Next</button>
+  </form>
+</div>
